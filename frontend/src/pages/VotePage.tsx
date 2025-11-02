@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { API_URL } from "../constants";
 import type { User } from "../types";
 import { capitalizeCodename } from "../utils";
 import { useSSE } from "../contexts/SSEContext";
@@ -19,7 +20,7 @@ export default function VotePage({ user, onBack }: VotePageProps) {
   useEffect(() => {
     const fetchRemainingVotes = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/votes/remaining/${user.id}`);
+        const response = await fetch(`${API_URL}/votes/remaining/${user.id}`);
         const data = await response.json();
         setVotesRemaining(data.votesRemaining);
       } catch (err) {
@@ -57,7 +58,7 @@ export default function VotePage({ user, onBack }: VotePageProps) {
 
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/votes/cast", {
+      const response = await fetch(`${API_URL}/votes/cast`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

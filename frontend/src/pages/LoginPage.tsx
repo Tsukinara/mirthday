@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AGENT_CODENAMES } from "../constants";
+import { AGENT_CODENAMES, API_URL } from "../constants";
 import type { User } from "../types";
 import "./LoginPage.scss";
 
@@ -50,7 +50,7 @@ export default function LoginPage({ onLogin, usedCodenames }: LoginPageProps) {
 
     try {
       // First, fetch all users to find matching codename (case-insensitive)
-      const response = await fetch("http://localhost:5000/users");
+      const response = await fetch(`${API_URL}/users`);
       const users: User[] = await response.json();
       
       const foundUser = users.find((u) => u.codename.toLowerCase() === loginCodename.toLowerCase());
@@ -63,7 +63,7 @@ export default function LoginPage({ onLogin, usedCodenames }: LoginPageProps) {
 
       // In a real app, you would check the PIN against hashed password
       // For now, we'll fetch the user details to verify they exist
-      const userResponse = await fetch(`http://localhost:5000/users/${foundUser.id}`);
+      const userResponse = await fetch(`${API_URL}/users/${foundUser.id}`);
       const userData = await userResponse.json();
 
       // Simple PIN check (in production, this should be hashed)
@@ -104,7 +104,7 @@ export default function LoginPage({ onLogin, usedCodenames }: LoginPageProps) {
       }
 
       // Check if codename already exists (case-insensitive)
-      const usersResponse = await fetch("http://localhost:5000/users");
+      const usersResponse = await fetch(`${API_URL}/users`);
       const users: User[] = await usersResponse.json();
       
       if (users.some((u) => u.codename.toLowerCase() === regCodename.toLowerCase())) {
@@ -114,7 +114,7 @@ export default function LoginPage({ onLogin, usedCodenames }: LoginPageProps) {
       }
 
       // Create new user (send lowercase to backend)
-      const response = await fetch("http://localhost:5000/users", {
+      const response = await fetch(`${API_URL}/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

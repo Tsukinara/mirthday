@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import type { User, Task } from "../types";
 import { capitalizeCodename } from "../utils";
 import { useSSE } from "../contexts/SSEContext";
+import { API_URL } from "../constants";
 import "./AdminPage.scss";
 
 interface AdminPageProps {
@@ -35,7 +36,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
   useEffect(() => {
     const fetchEventStatus = async () => {
       try {
-        const response = await fetch("http://localhost:5000/event-status");
+        const response = await fetch(`${API_URL}/event-status`);
         const status = await response.json();
         setEventStatus(status);
       } catch (err) {
@@ -53,7 +54,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
       if (data.type === 'TASK_SOLVED' || data.type === 'OBJECTIVE_CLEARED') {
         // Refresh player list and selected task
         if (eventStarted) {
-          fetch("http://localhost:5000/users")
+          fetch(`${API_URL}/users`)
             .then(res => res.json())
             .then(users => {
               const playerUsers = users.filter((u: User) => u.role === 'PLAYER');
@@ -64,7 +65,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
 
         // Refresh selected task if one is selected
         if (selectedPlayerId) {
-          fetch(`http://localhost:5000/tasks/user/${selectedPlayerId}`)
+          fetch(`${API_URL}/tasks/user/${selectedPlayerId}`)
             .then(res => res.json())
             .then(task => setSelectedTask(task))
             .catch(err => console.error("Failed to refresh task:", err));
@@ -85,7 +86,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
     const fetchPlayers = async () => {
       if (eventStarted) {
         try {
-          const response = await fetch("http://localhost:5000/users");
+          const response = await fetch(`${API_URL}/users`);
           const users = await response.json();
           // Filter out admin users
           const playerUsers = users.filter((u: User) => u.role === 'PLAYER');
@@ -111,7 +112,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
 
       setLoadingTask(true);
       try {
-        const response = await fetch(`http://localhost:5000/tasks/user/${selectedPlayerId}`);
+        const response = await fetch(`${API_URL}/tasks/user/${selectedPlayerId}`);
         const task = await response.json();
         setSelectedTask(task);
       } catch (err) {
@@ -127,7 +128,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
 
   const handleToggleEvent = async (started: boolean) => {
     try {
-      const response = await fetch("http://localhost:5000/event-status", {
+      const response = await fetch(`${API_URL}/event-status`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -150,7 +151,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
 
     setLoadingRandomTasks(true);
     try {
-      const response = await fetch("http://localhost:5000/tasks/admin/mark-random", {
+      const response = await fetch(`${API_URL}/tasks/admin/mark-random`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -172,7 +173,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
     setLoadingSolveAllObjectives(true);
     try {
       // First, fetch all objectives with answers (admin endpoint)
-      const objectivesResponse = await fetch("http://localhost:5000/objectives/admin/all");
+        const objectivesResponse = await fetch(`${API_URL}/objectives/admin/all`);
       const objectives = await objectivesResponse.json();
       
       // Filter out objectives that are already solved
@@ -187,7 +188,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
       // Verify each unsolved objective with its answer
       for (const objective of unsolvedObjectives) {
         try {
-          await fetch(`http://localhost:5000/objectives/verify/${objective.id}`, {
+          await fetch(`${API_URL}/objectives/verify/${objective.id}`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -222,7 +223,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
 
     setLoadingGiveVotes(true);
     try {
-      const response = await fetch("http://localhost:5000/votes/admin/give-votes", {
+      const response = await fetch(`${API_URL}/votes/admin/give-votes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -236,7 +237,7 @@ export default function AdminPage({ user, eventStarted, onToggleEvent, onLogout 
         setVotePlayerId("");
         setVoteAmount("");
         // Refresh players to show updated vote counts
-        const playersResponse = await fetch("http://localhost:5000/users");
+        const playersResponse = await fetch(`${API_URL}/users`);
         const users = await playersResponse.json();
         const playerUsers = users.filter((u: User) => u.role === 'PLAYER');
         setPlayers(playerUsers);

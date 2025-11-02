@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import { API_URL } from "../constants";
 import { SSEContext } from "../contexts/SSEContext";
 import { capitalizeCodename } from "../utils";
 import "./VoteStatusPage.scss";
@@ -31,7 +32,7 @@ export default function VoteStatusPage() {
 
   const fetchLeaderboard = async () => {
     try {
-      const response = await fetch("http://localhost:5000/votes/leaderboard");
+      const response = await fetch(`${API_URL}/votes/leaderboard`);
       const data = await response.json();
       setLeaderboard(data);
     } catch (err) {
@@ -41,7 +42,7 @@ export default function VoteStatusPage() {
 
   const fetchWinners = async () => {
     try {
-      const response = await fetch("http://localhost:5000/votes/winners");
+      const response = await fetch(`${API_URL}/votes/winners`);
       const data = await response.json();
       setWinners(data);
     } catch (err) {
@@ -51,7 +52,7 @@ export default function VoteStatusPage() {
 
   const fetchEventStatus = async () => {
     try {
-      const response = await fetch("http://localhost:5000/event-status");
+      const response = await fetch(`${API_URL}/event-status`);
       const data = await response.json();
       setEventStatus(data);
     } catch (err) {
@@ -61,7 +62,7 @@ export default function VoteStatusPage() {
 
   const handleEndVoting = async () => {
     try {
-      const response = await fetch("http://localhost:5000/event-status", {
+      const response = await fetch(`${API_URL}/event-status`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +96,7 @@ export default function VoteStatusPage() {
       return unsubscribe;
     } else {
       // Set up SSE connection for real-time updates (fallback when not in App)
-      const eventSource = new EventSource("http://localhost:5000/activities/stream");
+      const eventSource = new EventSource(`${API_URL}/activities/stream`);
       
       eventSource.onmessage = (event) => {
         const data = JSON.parse(event.data);

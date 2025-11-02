@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { API_URL } from "../constants";
 import type { User } from "../types";
 import { capitalizeCodename } from "../utils";
 import "./ResultsPage.scss";
@@ -27,7 +28,7 @@ export default function ResultsPage({ user }: ResultsPageProps) {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/votes/stats/${user.id}`);
+        const response = await fetch(`${API_URL}/votes/stats/${user.id}`);
         const data = await response.json();
         setStats(data);
       } catch (err) {

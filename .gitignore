@@ -12,6 +12,9 @@ build/
 .env.local
 .env.*.local
 
+# Keep example files
+!.env.example
+
 # Database files (SQLite)
 *.db
 *.db-journal

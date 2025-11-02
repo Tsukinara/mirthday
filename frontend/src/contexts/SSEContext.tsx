@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, useRef } from 'react';
 import type { ReactNode } from 'react';
+import { API_URL } from '../constants';
 
 interface SSEEvent {
   type: string;
@@ -19,7 +20,7 @@ export const SSEProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
 
   useEffect(() => {
     // Create SSE connection
-    const es = new EventSource("http://localhost:5000/activities/stream");
+    const es = new EventSource(`${API_URL}/activities/stream`);
     
     es.onmessage = (event) => {
       const data = JSON.parse(event.data);

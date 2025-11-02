@@ -1,0 +1,6 @@
+# Railway configuration file
+# This helps Railway understand how to build and run your services
+
+[build]
+builder = "nixpacks"
+

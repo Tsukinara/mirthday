@@ -9,6 +9,7 @@ import VotePage from "./pages/VotePage";
 import VoteStatusPage from "./pages/VoteStatusPage";
 import ResultsPage from "./pages/ResultsPage";
 import { useSSE } from "./contexts/SSEContext";
+import { API_URL } from "./constants";
 
 type ViewType = "main" | "vote" | "vote_status";
 
@@ -56,7 +57,7 @@ function App() {
   useEffect(() => {
     const fetchEventStatus = async () => {
       try {
-        const response = await fetch("http://localhost:5000/event-status");
+        const response = await fetch(`${API_URL}/event-status`);
         const status = await response.json();
         setEventStarted(status.eventStarted);
         setEventStatus(status);
@@ -97,7 +98,7 @@ function App() {
   useEffect(() => {
     const fetchUsedCodenames = async () => {
       try {
-        const response = await fetch("http://localhost:5000/users");
+        const response = await fetch(`${API_URL}/users`);
         const users: User[] = await response.json();
         setUsedCodenames(users.map(u => u.codename));
       } catch (err) {

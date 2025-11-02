@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import type { Objective, Activity } from "../types";
 import { capitalizeCodename } from "../utils";
 import { SSEContext } from "../contexts/SSEContext";
+import { API_URL } from "../constants";
 import "./StatusPage.scss";
 
 interface LeaderboardEntry {
@@ -97,22 +98,22 @@ function StatusPage() {
     const fetchData = async () => {
       try {
         // Fetch objectives
-        const objectivesResponse = await fetch("http://localhost:5000/objectives");
+        const objectivesResponse = await fetch(`${API_URL}/objectives`);
         const objectivesData = await objectivesResponse.json();
         setObjectives(objectivesData);
 
         // Fetch leaderboard
-        const leaderboardResponse = await fetch("http://localhost:5000/leaderboard");
+        const leaderboardResponse = await fetch(`${API_URL}/leaderboard`);
         const leaderboardData = await leaderboardResponse.json();
         setLeaderboard(leaderboardData);
 
         // Fetch initial activities
-        const activitiesResponse = await fetch("http://localhost:5000/activities");
+        const activitiesResponse = await fetch(`${API_URL}/activities`);
         const activitiesData = await activitiesResponse.json();
         setActivities(activitiesData);
 
         // Fetch event status
-        const eventStatusResponse = await fetch("http://localhost:5000/event-status");
+        const eventStatusResponse = await fetch(`${API_URL}/event-status`);
         const eventStatusData = await eventStatusResponse.json();
         setEventStatus(eventStatusData);
       } catch (err) {
@@ -124,9 +125,9 @@ function StatusPage() {
     const refreshData = async () => {
       try {
         const [objectivesResponse, leaderboardResponse, eventStatusResponse] = await Promise.all([
-          fetch("http://localhost:5000/objectives"),
-          fetch("http://localhost:5000/leaderboard"),
-          fetch("http://localhost:5000/event-status"),
+          fetch(`${API_URL}/objectives`),
+          fetch(`${API_URL}/leaderboard`),
+          fetch(`${API_URL}/event-status`),
         ]);
         
         const objectivesData = await objectivesResponse.json();
@@ -168,7 +169,7 @@ function StatusPage() {
       return unsubscribe;
     } else {
       // Set up SSE connection for real-time activity updates (fallback when not in App)
-      const eventSource = new EventSource("http://localhost:5000/activities/stream");
+      const eventSource = new EventSource(`${API_URL}/activities/stream`);
       
       eventSource.onmessage = (event) => {
         const data = JSON.parse(event.data);
@@ -219,7 +220,7 @@ function StatusPage() {
       if (eventStatus?.status === 'OBJECTIVES_COMPLETE') {
         try {
           // Update event status to FINAL_TASK_COMPLETE
-          const response = await fetch("http://localhost:5000/event-status", {
+          const response = await fetch(`${API_URL}/event-status`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",

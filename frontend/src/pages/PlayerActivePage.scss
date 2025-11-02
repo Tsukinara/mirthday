@@ -478,16 +478,6 @@
     }
   }
   
-  .debug-info {
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    
-    p {
-      font-size: 0.8rem;
-      margin-bottom: 0.2rem;
-    }
-  }
-  
   .code-form {
     margin-top: 0.75rem;
   }
@@ -535,26 +525,6 @@
   .btn-full-width {
     margin-top: 0.75rem;
   }
-}
-
-/* Debug Info */
-.debug-info {
-  background: #2d1b3d;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid $accent-purple;
-}
-
-.debug-info p {
-  font-size: 0.85rem;
-  color: $text-tertiary;
-  margin-bottom: 0.25rem;
-}
-
-.debug-code {
-  color: $accent-blue;
-  font-weight: bold;
 }
 
 /* Code Form */

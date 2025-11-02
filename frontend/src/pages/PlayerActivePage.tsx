@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import type { User, Task, Objective } from "../types";
 import { capitalizeCodename } from "../utils";
 import { useSSE } from "../contexts/SSEContext";
+import { API_URL } from "../constants";
 import "./PlayerActivePage.scss";
 
 interface PlayerActivePageProps {
@@ -36,7 +37,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     const fetchTask = async () => {
       if (user && eventStarted) {
         try {
-          const response = await fetch(`http://localhost:5000/tasks/user/${user.id}`);
+          const response = await fetch(`${API_URL}/tasks/user/${user.id}`);
           const taskData = await response.json();
           if (taskData) {
             setTask(taskData);
@@ -65,7 +66,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     const fetchObjectives = async () => {
       if (user && eventStarted) {
         try {
-          const response = await fetch("http://localhost:5000/objectives");
+          const response = await fetch(`${API_URL}/objectives`);
           const objectivesData = await response.json();
           setObjectives(objectivesData);
         } catch (err) {
@@ -84,7 +85,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     const fetchEventStatus = async () => {
       if (user && eventStarted) {
         try {
-          const response = await fetch("http://localhost:5000/event-status");
+          const response = await fetch(`${API_URL}/event-status`);
           const statusData = await response.json();
           setEventStatus(statusData);
         } catch (err) {
@@ -101,7 +102,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     const checkUnassignedTasks = async () => {
       if (eventStarted) {
         try {
-          const response = await fetch("http://localhost:5000/tasks/unassigned/available");
+          const response = await fetch(`${API_URL}/tasks/unassigned/available`);
           const data = await response.json();
           setUnassignedTasksAvailable(data.available);
         } catch (err) {
@@ -142,7 +143,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
       if (data.type === 'OBJECTIVE_CLEARED') {
         const fetchObjectives = async () => {
           try {
-            const response = await fetch("http://localhost:5000/objectives");
+            const response = await fetch(`${API_URL}/objectives`);
             const objectivesData = await response.json();
             setObjectives(objectivesData);
           } catch (err) {
@@ -171,7 +172,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/tasks/verify/${task.id}`, {
+      const response = await fetch(`${API_URL}/tasks/verify/${task.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -192,7 +193,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
         }
         
         // Refresh objectives to update progress
-        const objectivesResponse = await fetch("http://localhost:5000/objectives");
+        const objectivesResponse = await fetch(`${API_URL}/objectives`);
         const objectivesData = await objectivesResponse.json();
         setObjectives(objectivesData);
       } else {
@@ -208,7 +209,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     // Refresh task
     if (user && eventStarted) {
       try {
-        const response = await fetch(`http://localhost:5000/tasks/user/${user.id}`);
+        const response = await fetch(`${API_URL}/tasks/user/${user.id}`);
         const taskData = await response.json();
         if (taskData) {
           setTask(taskData);
@@ -221,7 +222,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     // Refresh objectives
     if (eventStarted) {
       try {
-        const response = await fetch("http://localhost:5000/objectives");
+        const response = await fetch(`${API_URL}/objectives`);
         const objectivesData = await response.json();
         setObjectives(objectivesData);
       } catch (err) {
@@ -232,7 +233,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     // Re-check unassigned tasks
     if (eventStarted) {
       try {
-        const response = await fetch("http://localhost:5000/tasks/unassigned/available");
+        const response = await fetch(`${API_URL}/tasks/unassigned/available`);
         const data = await response.json();
         setUnassignedTasksAvailable(data.available);
       } catch (err) {
@@ -246,7 +247,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     if (!user) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/tasks/request/${user.id}`, {
+      const response = await fetch(`${API_URL}/tasks/request/${user.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -278,7 +279,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
     if (!answer.trim()) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/objectives/verify/${objectiveId}`, {
+      const response = await fetch(`${API_URL}/objectives/verify/${objectiveId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -305,7 +306,7 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
           );
         } else {
           // Fallback: refresh all objectives
-          const objectivesResponse = await fetch("http://localhost:5000/objectives");
+          const objectivesResponse = await fetch(`${API_URL}/objectives`);
           const objectivesData = await objectivesResponse.json();
           setObjectives(objectivesData);
         }
@@ -579,14 +580,6 @@ export default function PlayerActivePage({ user, eventStarted, onLogout, onNavig
                       </div>
                     </div>
                   )}
-                </div>
-
-                {/* Debug Info */}
-                <div className="debug-info">
-                  <p><strong>DEBUG:</strong></p>
-                  <p>Contents: {task.contents}</p>
-                  <p>Code: <span className="debug-code">{task.code}</span></p>
-                  <p className="task-location">Location: {task.location}</p>
                 </div>
 
                 {task.status === "UNSOLVED" && (

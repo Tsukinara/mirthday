@@ -8,7 +8,13 @@ dotenv.config();
 
 // Create Express app
 const app = express();
-app.use(cors());
+
+// CORS configuration - allow frontend domain in production
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || '*', // Allow all origins in dev, restrict in production
+  credentials: true,
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Import routes

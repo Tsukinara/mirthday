@@ -1,13 +1,13 @@
 id,code,objective,contents,location,prefix,type,clue_content
 1,EXRX,treasure,treasure: Cook's protector,apron pocket,Look inside,cryptic,Confused pan or garment (5)
-2,EVWJ,treasure,treasure: League objective,gamer keyboard,Look under,anagram,
+2,EVWJ,treasure,treasure: League objective,rainbow keyboard,Look under,text,🌧️ 🎀 🔑 🛹
 3,BQQX,treasure,treasure: Edgy erinaceous entity,den table lamp,Look under,anagram,
 4,FAMA,treasure,treasure: Word on a mat,welcome mat,Look under,text,What you might say to me when I walk in?
 5,TEKS,treasure,"treasure: Will Shortz, e.g.",Will Shortz,Look behind,catfish,"1952 births, 20th-century American LGBTQ people, 21st-century American LGBTQ people, Crossword creators, Indiana University Bloomington alumni, LGBTQ people from Indiana, LGBTQ people from New York (state), Living people, NPR people, People from Crawfordsville, Indiana, People from Pleasantville, New York, The New York Times editors, University of Virginia School of Law alumni"
 6,KAIX,treasure,treasure: Ancient artifact,Frieren,Look under,image,img_01.webp
-7,ELXT,treasure,"treasure: Oaten torus, or English farewell",Honey Nuts,Look inside,anagram,
+7,ELXT,treasure,"treasure: Oaten torus, or English farewell",Honey Nuts,Look inside,text,Matt's favorite cereal
 8,DXAW,treasure,treasure: Densest stable element,tungsten cube,Look under,anagram,
-9,AMHF,treasure,treasure: Internet connection device,modem,Look atop,anagram,
+9,AMHF,treasure,treasure: Internet connection device,internet router,Look atop,anagram,
 10,TAZR,treasure,treasure: Singer with teal twintails,Hatsune Miku,Look under,catfish,"Animated characters introduced in 2007, Anime and manga characters introduced in 2007, Female characters in video games, Fictional characters invented for recorded music, Fictional female musicians, Fictional singers, Internet meme characters, Internet memes, Internet memes introduced in 2007, Japanese female idols, Japanese mascots, Music production software, Singer characters in video games, Teenage characters in video games, Video game characters introduced in 2009, Video game characters who use magic, Video game mascots, Video game memes, Virtual influencers, Vocaloids introduced in 2007"
 11,XFJT,treasure,treasure: Matt's favorite noodle,udon,Look under,cryptic,Noodles hidden by loud onions (4)
 12,ZLLK,treasure,treasure: Onigiri wrapper,nori,Look amongst,cryptic,Revolutionary iron wrapper (4)
@@ -15,10 +15,10 @@ id,code,objective,contents,location,prefix,type,clue_content
 14,GDRV,treasure,treasure: Type of bear or nightwear,shima enaga,Look under,image,img_02.webp
 15,ZLDS,treasure,"treasure: ""Polka Face"" singer",turtles,Look behind,image,img_03.webp
 16,AKLV,treasure,"treasure: Guess Wikipedia articles, say",Uncharted 4,Look inside,catfish,"2016 video games, Action-adventure games, Annie Award winners, British Academy Games Award for Best Game winners, Iron Galaxy games, Multiplayer and single-player video games, Naughty Dog games, Platformers, PlayStation 4 games, PlayStation 4 Pro enhanced games, PlayStation 5 games, Sequel video games, Sony Interactive Entertainment games, Stealth video games, Third-person shooters, Video games developed in the United States, Video games scored by Henry Jackman, Video games set in Italy, Video games set in Madagascar, Video games set in New Orleans, Video games set in Panama, Video games set in prison, Video games set in Scotland, Video games set in the 1980s, Video games set in the 1990s, Video games set in the 2010s, Video games set in the 2020s, Video games set in the United States, Video games set on islands, Video games using Havok, Video games written by Neil Druckmann, Windows games"
-17,FTIH,treasure,"treasure: Nice Nature, for one",Titleholder,Look on,anagram,
+17,FTIH,treasure,"treasure: Nice Nature, for one",Titleholder,Look on,catfish,"2018 racehorse births, Kikuka-shō winners, Racehorses bred in Japan, Racehorses trained in Japan, Takarazuka Kinen winners, Tenno Sho winners, Thoroughbred family 9-c"
 18,QWEP,treasure,treasure: They're poached for breakfast,cage-free toes ,Look amongst,image,img_04.webp
 19,DHIQ,treasure,"treasure: Saber, Lancer, or Berserker, e.g.",Astolfo,Look under,image,img_05.webp
-20,TXTN,treasure,"treasure: Patrón or 1800, e.g.",Patron,Look under,anagram,
+20,TXTN,treasure,"treasure: Patrón or 1800, e.g.",Fireball whiskey,Look under,text,🔥 ⚽
 21,TUHU,nametags,nametags: Reisen Udongein Inaba,Reisen,Look besides,text,Matt's favorite Touhou character
 22,NXLR,nametags,nametags: Princess Kaguya,Kaguya Ch. 150,Look at,image,img_06.webp
 23,CRWI,nametags,nametags: Luna Lovegood,Gringott's Galleons,Look inside,text,A box of cocoa dough?
@@ -60,7 +60,7 @@ id,code,objective,contents,location,prefix,type,clue_content
 59,ZSNQ,keyboard,keyboard: O,front gate,Look atop,anagram,
 60,BXQD,keyboard,keyboard: P,curry,Look inside,cryptic,Scamper headlessly for Indian food (5)
 61,RJLP,keyboard,keyboard: A,sound bar,Look under,b_and_a,puget ____ wave; chocolate ____ exam
-62,FIYV,keyboard,keyboard: S,rosés,Look behind,text,
+62,FIYV,keyboard,keyboard: S,rosés,Look behind,text,🌹 A 🍷
 63,FDNE,keyboard,keyboard: D,sound isolating headphones,Look inside,anagram,
 64,BDUK,keyboard,keyboard: F,gummy bears,Look amongst,text,Chicago athletes who've lost their teeth?
 65,OQGT,keyboard,keyboard: G,Substitute,Look under,image,img_17.webp
@@ -69,54 +69,54 @@ id,code,objective,contents,location,prefix,type,clue_content
 68,DCRX,keyboard,keyboard: K,Derpy,Look under,image,img_19.webp
 69,YERR,keyboard,keyboard: L,Sharpies,Look amongst,catfish,"Brands that became generic, Newell Brands, Pens, Products introduced in 1964, Writing implements"
 70,IEIR,keyboard,keyboard: Z,lockpicks,Look behind,anagram,
-71,VGHH,keyboard,keyboard: X,Shigure Ui,Look beside,image,img_20.webp
+71,VGHH,keyboard,keyboard: X,Shigure Ui,Look beside,text,Matt's favorite VTuber
 72,YOUO,keyboard,keyboard: C,staircase windowsill,Look atop,anagram,
-73,INOT,keyboard,keyboard: V,Holo,Look under,image,img_21.webp
+73,INOT,keyboard,keyboard: V,Holo,Look under,image,img_20.webp
 74,HTAS,keyboard,keyboard: B,subwoofer,Look under,text,Dom meower's partner?
 75,FJAS,keyboard,keyboard: N,bath mat,Look under,anagram,
 76,SKMR,keyboard,keyboard: M,dryer sheets,Look amongst,text,Something you might want if you sleep in a damp bed all the time?
 77,ZCRM,postcards,postcards: Winter Lodge,fake lashes,Look atop,text,Something batted to flirt?
 78,JOGX,postcards,postcards: Downtown Los Altos,blender,Look under,catfish,"1994 software, 3D modeling software for Linux, 3D rendering software for Linux, AmigaOS 4 software, Computer-aided design software for Linux, Cross-platform free software, Formerly proprietary software, Free 2D animation software, Free 3D animation software, Free computer-aided design software, Free software for BSD, Free software for Linux, Free software for macOS, Free software for Windows, Free software programmed in C, Free software programmed in C++, Free software programmed in Python, Global illumination software, Haiku (operating system), IRIX software, MacOS graphics-related software, MorphOS software, Motion graphics software for Linux, Portable software, Software that uses FFmpeg, Technical communication tools, Visual effects software, Windows graphics-related software"
-79,QEBF,postcards,postcards: Bay View,Here to Slay,Look inside,image,img_22.webp
+79,QEBF,postcards,postcards: Bay View,Here to Slay,Look inside,image,img_21.webp
 80,ZXKT,postcards,postcards: Home,paper towel holder,Look under,anagram,
 81,LBKA,postcards,postcards: Google Moffett Place,frying pan,Look atop,text,Something Brock might use to keep dry
-82,YLAY,postcards,postcards: USS Hornet Museum,cheese grater,Look under,anagram,
-83,QOPR,postcards,postcards: Downtown San Mateo,hot chocolate,Look under,b_and_a,red ____ springs; milk _____ labrador
+82,YLAY,postcards,postcards: USS Hornet Museum,cheese grater,Look under,text,🧀>
+83,QOPR,postcards,postcards: Downtown San Mateo,hot chocolate,Look under,b_and_a,red ____ springs; milk ____ labrador
 84,BSCR,postcards,postcards: Berkeley Sather Gate,spice box,Look behind,b_and_a,old ____ girls; juke ____ office
 85,QEKA,postcards,postcards: Bridgeview Park,upstairs bathroom door,Look behind,anagram,
-86,KHSX,postcards,postcards: Union City Pyramid,snack minitable,Look below,anagram,
+86,KHSX,postcards,postcards: Union City Pyramid,snack table,Look below,anagram,
 87,LFLC,postcards,postcards: Legion of Honor,Bravely Default,Look beside,catfish,"2012 video games, Cattle Call (company) games, Fantasy video games, Fiction about deicide, Fiction about orphans, Japanese role-playing video games, Nintendo 3DS eShop games, Nintendo 3DS games, Nintendo 3DS-only games, Nintendo games, Nintendo Network games, Nintendo Switch 2 games, Role-playing video games, Single-player video games, Square Enix games, Steampunk video games, Video games about parallel universes, Video games about religion, Video games developed in Japan, Video games featuring female protagonists"
 88,CYWU,postcards,postcards: Mori Point,Switch case,Look inside,b_and_a,light ____ hitter; suit ____ study
-89,INDR,postcards,postcards: SFO,Rumiko Takahashi book,Look inside,image,img_23.webp
-90,XKCV,postcards,postcards: Stanford Oval,sea creatures puzzle,Look inside,image,img_24.webp
+89,INDR,postcards,postcards: SFO,Rumiko Takahashi book,Look in work by,catfish,"1957 births, 20th-century Japanese women artists, Chevaliers of the Ordre des Arts et des Lettres, Grand Prix de la ville d'Angoulême winners, Japan Women's University alumni, Japanese cartoonists, Japanese female comics artists, Japanese female comics writers, Living people, Manga artists from Niigata Prefecture, People from Niigata (city), Recipients of the Medal with Purple Ribbon, Science Fiction Hall of Fame inductees, Will Eisner Award Hall of Fame inductees, Women manga artists"
+90,XKCV,postcards,postcards: Stanford Oval,sea creatures puzzle,Look inside,image,img_22.webp
 91,SACQ,postcards,postcards: Menlo College,hallway cabinets,Look under,anagram,
 92,XBGF,postcards,postcards: Meta Park,office headrest,Look behind,anagram,
-93,REHK,postcards,postcards: Palo Alto Art Center,Logo Modernism,Look inside,image,img_25.webp
-94,UHUF,postcards,postcards: Hoover Tower,whiteboard GA,Look under,image,img_26.webp
-95,ZJAH,postcards,postcards: Battery Spencer,photo album,Look within,image,img_27.webp
+93,REHK,postcards,postcards: Palo Alto Art Center,Logo Modernism,Look inside,image,img_23.webp
+94,UHUF,postcards,postcards: Hoover Tower,whiteboard GA,Look under,image,img_24.webp
+95,ZJAH,postcards,postcards: Battery Spencer,photo album,Look within,cryptic,Photos of a large butt (5)
 96,IDDN,postcards,postcards: Golden Gate Pavilion,Scrabble,Look inside,catfish,"American board games, American brands, American inventions, Board games introduced in 1938, Game.com games, Mattel games, Multiplayer games, Parker Brothers games, Selchow and Righter games, Tabletop games, Word board games"
 97,HHKJ,postcards,postcards: Alcatraz,Secret Hitler,Look inside,catfish,"Board games introduced in 2016, Creative Commons-licensed games, Cultural depictions of Donald Trump, Kickstarter-funded tabletop games, Party games, Social deduction games, Tabletop games, Works about Adolf Hitler, Works about Nazism, Works set in the 1930s"
-98,PRJF,postcards,postcards: Oracle Park,Endfield bag,Look inside,image,img_28.webp
+98,PRJF,postcards,postcards: Oracle Park,Endfield bag,Look inside,image,img_25.webp
 99,ATMI,postcards,postcards: Yerba Buena,jewelry box,Look under,anagram,
 100,HZCJ,postcards,postcards: Half Moon Bay,lint trap,Look inside,anagram,
-101,LUXU,postcards,postcards: Painted Ladies,marker case,Look inside,image,img_29.webp
+101,LUXU,postcards,postcards: Painted Ladies,marker case,Look inside,image,img_26.webp
 102,QGVF,postcards,postcards: Oakland Coliseum,ironing board,Look behind,text,A surface for addressing some pressing matters?
 103,SGNB,postcards,postcards: Sign Hill Park,bedroom door,Look behind,anagram,
-104,LRPS,postcards,postcards: Downtown Redwood City,Dick Butt,Look behind,image,img_30.webp
-105,ZKVP,postcards,postcards: LEGOLAND Discovery Center,angry toast,Look under,image,img_31.webp
+104,LRPS,postcards,postcards: Downtown Redwood City,Dick Butt,Look behind,image,img_27.webp
+105,ZKVP,postcards,postcards: LEGOLAND Discovery Center,angry toast,Look under,image,img_28.webp
 106,RRPT,postcards,postcards: Great America,prop fifty,Look under,catfish,"2025 ballot measures in the United States, 2025 California elections, 2025 controversies in the United States, 2025 in American politics, 2025 in California, California ballot propositions, Democratic backsliding in the United States, Gerrymandering in the United States, Redistricting in the United States"
-107,WITX,postcards,postcards: San Jose State University,mailbox,Look inside,anagram,
+107,WITX,postcards,postcards: San Jose State University,mailbox,Look inside,text,♂️ 📦
 108,TKLE,postcards,postcards: Mission Peak,fusebox,Look inside,text,A shocking place to go for a household trip?
 109,GNLH,library,library: card for The Bad Beginning,Animal Farm,Look inside,catfish,"1945 British novels, Allegory, Animal tales, Books about cattle, Books about Joseph Stalin, British novellas, British novels adapted for radio, British novels adapted into films, British novels adapted into operas, British novels adapted into plays, British novels adapted into television shows, British political novels, British satirical novels, Censored books, Cultural depictions of Karl Marx, Cultural depictions of Leon Trotsky, Cultural depictions of Nicholas II of Russia, Dystopian novels, English novels, Fantasy novels adapted into films, Hugo Award for Best Novella–winning works, Novels about animals, Novels about cats, Novels about dogs, Novels about pigs, Novels about propaganda, Novels about revolutionaries, Novels about totalitarianism, Novels adapted into comics, Novels adapted into video games, Novels by George Orwell, Novels set on farms, Political literature, Political satire novels, Roman à clef novels, Secker & Warburg books, Totalitarianism in fiction, Works about Vladimir Lenin"
 110,JQNU,library,library: card for Peter Pan,Slaughterhouse-Five,Look inside,catfish,"1960s in comedy, 1969 American novels, 1969 science fiction novels, American black comedy novels, American comedy novels, American novels adapted into films, American philosophical novels, American satirical novels, American science fiction novels, American war novels, Anti-war novels, Books with cover art by Paul Bacon, Censored books, Comedy novels adapted into films, Comic science fiction novels, Dresden in fiction, Fiction about alien zoos, Metafictional novels, Military humor, Military science fiction novels, Nonlinear narrative novels, Novels about death, Novels about Nazi Germany, Novels about post-traumatic stress disorder, Novels about prisoners of war, Novels about revenge, Novels about time travel, Novels by Kurt Vonnegut, Novels set during the Cold War, Novels set during World War II, Novels set in Chicago, Novels set in Germany, Novels set in Massachusetts, Novels set in New York (state), Novels set in New York City, Novels set in South Carolina, Novels set in the future, Novels set in Vermont, Novels set in zoos, Novels set on fictional planets, Novels with unreliable narrators, Postmodern novels, Science fiction novels adapted into films, War novels adapted into films, Works about the bombing of Dresden"
 111,SFJR,library,library: card for The Outsiders,Romeo and Juliet,Look inside,catfish,"1590s plays,British plays adapted for television,British plays adapted into films,English Renaissance plays,Fiction about poisonings,Fictional couples,Literary duos,Love stories,Plays about families,Plays about suicide,Plays adapted into ballets,Plays adapted into operas,Plays adapted into radio programs,Plays set in Italy,Plays set in Verona,Shakespearean tragedies"
 112,ICDK,library,library: card for Slaughterhouse-Five,Journey to the West,Look inside,catfish,"1590s fantasy novels, 1592 in religion, 1592 novels, 16th-century Chinese novels, Adventure novels adapted into films, Books about Gautama Buddha, Buddhist novels, Chinese adventure novels, Chinese classic novels, Chinese comedy novels, Chinese fantasy novels, Chinese novels adapted into films, Chinese novels adapted into television series, Comedy novels adapted into films, Epic novels, Fantasy adventure novels, Fantasy comedy, Fantasy novels adapted into films, Literature about pilgrimages, Ming dynasty literature, Ming dynasty novels, Monkeys in popular culture, Novels about pigs, Novels adapted into operas, Novels adapted into video games, Novels set in 7th-century Tang dynasty, Novels set in China, Novels set in India, Novels set in Xi'an, Picaresque novels, Pilgrimage accounts, Religion in fantasy fiction, Shenmo novels, Taoism in popular culture, Works of uncertain authorship, Works published anonymously"
-113,FDXV,library,library: card for Where the Sidewalk Ends,The Bad Beginning,Look inside,image,img_32.webp
+113,FDXV,library,library: card for Where the Sidewalk Ends,The Bad Beginning,Look inside,image,img_29.webp
 114,WFBK,library,library: card for Little Women,Pale Fire,Look inside,catfish,"1962 American novels, Metafictional novels, Novels about writers, Novels by Vladimir Nabokov, Novels set in fictional countries, Novels with unreliable narrators, Postmodern novels"
 115,BFNR,library,library: card for Animal Farm,Little Women,Look inside,catfish,"1860s children's books, 1868 American novels, American autobiographical novels, American bildungsromans, American children's novels, American novels adapted into films, American novels adapted into plays, American novels adapted into television shows, Children's books set in Massachusetts, Children's books set in the 1860s, Columbia Pictures franchises, Concord, Massachusetts, Film series introduced in 1917, Metro-Goldwyn-Mayer franchises, Novels about sisters, Novels by Louisa May Alcott, Novels republished in the Library of America, Novels set during the American Civil War, Novels set in Massachusetts"
 116,KCJX,library,library: card for Journey to the West,The Outsiders,Look inside,catfish,"1967 American novels, 1967 debut novels, American bildungsromans, American novels adapted into films, American novels adapted into plays, American young adult novels, BILBY Award–winning works, Culture of Tulsa, Oklahoma, Fiction set in 1965, First-person narrative novels, Greasers (subculture), Novels by S. E. Hinton, Novels set in Tulsa, Oklahoma, Viking Press books"
 117,FMUP,library,library: card for Pale Fire,Dune,Look inside,catfish,"Book series introduced in 1965, ENnies winners, Family saga novels, Fiction about mining, Fiction about space warfare, Military fiction, Planetary romances, Science fiction book series, Soft science fiction, Space opera, Works about the future"
-118,DOJW,library,library: card for Invisible Man,The End,Look inside,image,img_33.webp
+118,DOJW,library,library: card for Invisible Man,The End,Look inside book w/ name,image,img_30.webp
 119,JMNW,library,library: card for Ender's Game,Peter Pan,Look inside,catfish,"Child characters in animated films, Child characters in film, Child characters in literature, Child characters in musical theatre, Fictional characters who can levitate, Fictional English people, Fictional swordfighters in literature, Literary characters introduced in 1902, Male characters in animation, Male characters in film, Male characters in literature, Male characters in television, Pan (god), Trying to prevent adulthood in popular culture"
 120,HNSS,library,library: card for Romeo and Juliet,Brave New World,Look inside,catfish,"1930s controversies, 1932 British novels, 1932 science fiction novels, Aldous Huxley, Book censorship in the Republic of Ireland, British novels adapted for radio, British novels adapted into films, British novels adapted into plays, British novels adapted into television shows, British philosophical novels, British satirical novels, British science fiction novels, Censored books, Chatto & Windus books, Cultural depictions of Henry Ford, Dystopian novels, Fiction about eugenics, Fiction about mind control, Fiction about self-harm, Futurology books, Novels about cloning, Novels about consumerism, Novels about substance abuse, Novels about suicide, Novels about totalitarianism, Novels by Aldous Huxley, Novels involved in plagiarism controversies, Novels set in fictional countries, Novels set in London, Novels set in the 26th century, Novels set in the future, Obscenity controversies in literature, Religion in science fiction, Science fiction novels adapted into films, Sleep in fiction, Social science fiction, Totalitarianism in fiction, Works about neurochemistry"
 121,JDKZ,library,library: card for Dune,Ender's Game,Look inside,catfish,"1985 American novels, 1985 science fiction novels, 433 Eros, American novels adapted into films, American science fiction novels, American young adult novels, Extinction in fiction, Fiction about near-Earth asteroids, Fiction books about genocide, Hugo Award for Best Novel–winning works, Military science fiction novels, Nebula Award for Best Novel–winning works, Novels about extraterrestrial life, Novels about insects, Novels about space warfare, Novels adapted into comics, Novels adapted into video games, Novels set in the 22nd century, Science fiction novels adapted into films, Tor Books books, Works about child soldiers, Works based on short fiction, Works originally published in Analog Science Fiction and Fact, Works originally published in pulp magazines, Young adult science fiction novels"
@@ -127,9 +127,9 @@ id,code,objective,contents,location,prefix,type,clue_content
 126,ZTHY,eels,eels: EELFRED PENNYWORTH,cutting boards,Look behind,text,Company directors in charge of downsizing?
 127,JUKZ,eels,eels: MARCEELINE,feminine products,Look amongst,cryptic,Postman damaged sanitary products (7)
 128,ZZBC,eels,eels: RAFAEEL NADAL,chicken,Look inside,cryptic,Stylish Barbie partner is a coward (7)
-129,ODJV,eels,eels: EEL DORADO,box guarded by eels,Look inside,image,img_34.webp
-130,YNMR,eels,eels: VOLODYMYR ZEELENSKYY,drumsticks,Look amongst,anagram,
-131,FTYO,eels,eels: LEONHARD EELER,eel cup,Look inside,image,img_35.webp
+129,ODJV,eels,eels: EEL DORADO,box guarded by eels,Look inside,image,img_31.webp
+130,YNMR,eels,eels: VOLODYMYR ZEELENSKYY,drumsticks,Look amongst,text,🍗🍗🍗
+131,FTYO,eels,eels: LEONHARD EELER,eel cup,Look inside,image,img_32.webp
 132,HOVL,eels,eels: EELLEN DEGENERES,Wheel of Fortune,Look behind,catfish,"1970s American game shows, 1975 American television series debuts, 1980s American game shows, 1983 American television series debuts, 1990s American game shows, 1991 American television series endings, 2000s American game shows, 2010s American game shows, 2020s American game shows, American English-language television shows, CBS game shows, Culver City, California, Daytime Emmy Award for Outstanding Game Show winners, First-run syndicated game shows, NBC game shows, Television productions suspended due to the COVID-19 pandemic, Television series by CBS Studios, Television series by King World Productions, Television series by Merv Griffin Enterprises, Television series by Sony Pictures Television, Television series created by Merv Griffin, Television shows adapted into video games, Television shows presented by Chuck Woolery, Television shows presented by Pat Sajak"
 133,PJNQ,eels,eels: WEELIAM SHAKESPEARE,blue flowers,Look beneath,anagram,
 134,WDGO,eels,eels: DANEEL NARODITSKY,shogi pieces,Look amongst,anagram,
@@ -138,44 +138,44 @@ id,code,objective,contents,location,prefix,type,clue_content
 137,EEXL,eels,eels: HERMAN MEELVILLE,pencil case,Look inside,anagram,
 138,HPAD,eels,eels: EELI MANNING,motorcycle jacket pocket,Look inside,anagram,
 139,TSVI,eels,eels: EEL CAPONE,octopus,Look under,cryptic,Seafood soup goes bad after October (7)
-140,FMQG,music,music: Moonlight Densetsu,Brazilian piano book,Look within,image,img_36.webp
-141,KZRM,music,music: A Cruel Angel's Thesis,Yin Yang fish,Look behind,image,img_37.webp
-142,BFEA,music,music: the WORLD,Loop station,Look under,text,Something that might make a musician loopy
-143,RDWH,music,music: Bad Apple,cling seal,Look besides,anagram,
+140,FMQG,music,music: Moonlight Densetsu,folding screen,Look behind,image,img_33.webp
+141,KZRM,music,music: A Cruel Angel's Thesis,Yin Yang fish,Look behind,image,img_34.webp
+142,BFEA,music,music: the WORLD,loop station,Look under,text,Something that might make a musician loopy
+143,RDWH,music,music: Bad Apple,cling wrap,Look besides,anagram,
 144,DMKJ,music,music: Blue Bird,Photosynthesis,Look inside,catfish,"Biological processes, Botany, Cellular respiration, Ecosystems, Metabolism, Plant nutrition, Plant physiology, Quantum biology"
-145,VKMD,music,music: Crossing Field,Totoro,Look under,image,img_38.webp
-146,WOAN,music,music: Sparkle,Algospeak,Look inside,image,img_39.webp
+145,VKMD,music,music: Crossing Field,Totoro,Look under,catfish,"1980s children's animated films, 1980s children's fantasy films, 1980s Japanese-language films, 1988 anime films, 1988 children's films, 1988 fantasy films, 1988 films, Animated films about father–daughter relationships, Animated films about mother–daughter relationships, Animated films about sisters, Animated films based on Japanese myths and legends, Animated films set in forests, Animated films set in Japan, Animated films set in the 1950s, Anime films with original screenplays, Best Film Kinema Junpo Award winners, Drama anime and manga, Films about runaways, Films directed by Hayao Miyazaki, Films scored by Joe Hisaishi, Films with screenplays by Hayao Miyazaki, Japanese animated fantasy films, Japanese animated feature films, Japanese children's fantasy films, Japanese mythology in anime and manga, Studio Ghibli animated films, Toho animated films, Tokuma Shoten anime"
+146,WOAN,music,music: Sparkle,Algospeak,Look inside,image,img_35.webp
 147,SSTW,music,music: Peace Sign,microwave,Look under,catfish,"20th-century inventions, American inventions, Home appliances, Ovens, Products introduced in 1947, Radiation effects"
 148,SBGS,music,music: Inferno,Winter Wind,Look behind,text,An etude George R. R. Martins might be interested in?
-149,PUYM,music,music: Comet,desk mat,Look under,image,img_40.webp
+149,PUYM,music,music: Comet,desk mat,Look under,image,img_36.webp
 150,UTEG,music,music: Mixed Nuts,TIME magazine,Look inside,catfish,"1923 establishments in New York City, American news websites, Biweekly magazines published in the United States, English-language magazines, Magazines established in 1923, Magazines formerly owned by Meredith Corporation, Magazines published in New York City, News magazines published in the United States, Weekly magazines published in the United States"
-151,RBJX,music,music: Sunny,Bocchi vinyl,Look inside,image,img_41.webp
-152,HOFV,music,music: Moon piece,orchids,Look under,anagram,
+151,RBJX,music,music: Sunny,Bocchi vinyl,Look inside,image,img_37.webp
+152,HOFV,music,music: Moon piece,lego orchids,Look under,anagram,
 153,QWIF,music,music: Angel piece,bathroom plant,Look under,anagram,
 154,SJIK,music,music: World piece,Nerf disruptor,Look under,anagram,
-155,AMGU,music,music: Apple piece,inkstone,Look around,anagram,
-156,LFMA,music,music: Bird piece,drawing glove,Look inside,anagram,
+155,AMGU,music,music: Apple piece,calligraphy inkstone,Look around,anagram,
+156,LFMA,music,music: Bird piece,drawing glove,Look inside,text,A glove with only two fingers
 157,DVHC,music,music: Cross piece,Google Home,Look under,anagram,
-158,WKOI,music,music: Sparkle piece,salad cat,Look behind,image,img_42.webp
+158,WKOI,music,music: Sparkle piece,salad cat,Look behind,image,img_38.webp
 159,EFFZ,music,music: Peace piece,microphone,Look under,cryptic,Neomorphic design for a sound investment? (10)
 160,WSEK,music,music: Fire piece,candy bowl,Look inside,b_and_a,rock ____ cane; super ____ cut
 161,SMKP,music,music: Comet piece,pull-up bar,Look behind,anagram,
 162,OZPQ,music,music: Nuts piece,washing machine,Look behind,cryptic,Home appliance wildly chainsawing hem (7 7)
-163,WYJO,music,music: Sun piece,entrance brickwork,Look around,image,img_43.webp
+163,WYJO,music,music: Sun piece,entrance brickwork,Look around,image,img_39.webp
 164,PUWR,gacha,gacha: XAIHI,mushroom puzzle,Look inside,b_and_a,oyster ____ cloud; crossword ____ hunt
 165,BNZD,gacha,gacha: ESSEX,bedroom window,Look atop,anagram,
 166,GQFL,gacha,gacha: LAPPLAND,piano bench,Look inside,anagram,
 167,REOO,gacha,gacha: PHILAE,teapot,Look inside,b_and_a,molly ____ ceremony; melting ____ belly
-168,JERH,gacha,gacha: AMIYA,rice cooker,Look inside,image,img_44.webp
-169,WLLQ,gacha,gacha: EXUSIAI,Zebra,Look inside,image,img_45.webp
-170,XQRT,gacha,gacha: BEESWAX,birthday photo,Look behind,image,img_46.webp
+168,JERH,gacha,gacha: AMIYA,rice cooker,Look inside,image,img_40.webp
+169,WLLQ,gacha,gacha: EXUSIAI,Zebra,Look inside,image,img_41.webp
+170,XQRT,gacha,gacha: BEESWAX,birthday photo,Look behind,image,img_42.webp
 171,PUWJ,gacha,gacha: PARIS,ukulele case,Look inside,anagram,
 172,MVMV,gacha,gacha: PHOENIX,Gatorades,Look amongst,catfish,"Britvic, Culture of Florida, Florida Gators, Food and drink introduced in the 1960s, Products introduced in 1967, Soft drinks, Sports drinks"
 173,CPID,gacha,gacha: XENIA,chopsticks,Look behind,b_and_a,karate ____ suey; hockey ____ and stones
 174,GICQ,gacha,gacha: ANGELINA,dead plant,Look behind,b_and_a,walking ____ sea; power ____ fibers
 175,LEPB,gacha,gacha: ALABAMA,medicine cabinet,Look inside,text,A group of high-level politicians concerned about health?
 176,GPUK,gacha,gacha: CHARLOTTE,bedroom lamp,Look inside,anagram,
-177,CNDI,gacha,gacha: SPRINGFIELD,apple pie,Look inside,image,img_47.webp
+177,CNDI,gacha,gacha: SPRINGFIELD,apple pie,Look inside,catfish,"American pies, Antigua and Barbuda cuisine, Apple dishes, British desserts, British pies, Christmas food, Culture of the United States, Dutch pastries, English cuisine, European cuisine, Fruit pies, German cuisine, National dishes, Romani cuisine, Swedish pastries, Thanksgiving food"
 178,QOMH,gacha,gacha: FLORENCE,Black Thunder,Look amongst,text,Matt's favorite chocolates
 179,QAKS,gacha,gacha: VODKA,bicycle helmet,Look inside,anagram,
 180,VSKI,gacha,gacha: KAAVI,motorcycle glove,Look inside,text,Some digital riding gear?
@@ -183,6 +183,6 @@ id,code,objective,contents,location,prefix,type,clue_content
 182,ZLOP,gacha,gacha: ALICE,first aid kit,Look inside,anagram,
 183,TMGU,gacha,gacha: XILONEN,drawing tablet,Look behind,text,A very artistically-talented pill?
 184,UZSR,gacha,gacha: VERXINA,bean bag,Look under,b_and_a,mister ____ sprouts; sleeping ____ o crab
-185,RELR,gacha,gacha: FU XUAN,beanbag lamp,Look inside,anagram,
+185,RELR,gacha,gacha: FU XUAN,beanbag lamp,Look inside,text,🫘 👜 💡
 186,BEFW,gacha,gacha: MYSTERIOUS HEROINE X,office lamp,Look inside,anagram,
 187,UENT,gacha,gacha: EXIA,Doritos,Look amongst,text,Some bags of tasty triangles
