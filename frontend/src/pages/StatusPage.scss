@@ -1,0 +1,721 @@
+@import '../constants';
+
+.status-container {
+  font-family: sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, $bg-darkest 0%, $bg-primary 100%);
+}
+
+.status-content {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: calc(100vh - 40px);
+}
+
+/* Objectives Section - Left (flexible, takes remaining space) */
+.objectives-section {
+  flex: 1;
+  min-width: 0;
+  background: $bg-card;
+  border: 1px solid $border-primary;
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.status-section-title {
+  color: $text-primary;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid $border-secondary;
+  padding-bottom: 0.5rem;
+}
+
+.objectives-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.status-objective-card {
+  background: $bg-secondary;
+  border: 2px solid $border-secondary;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: border-color 0.2s;
+}
+
+.status-objective-card:hover {
+  border-color: $accent-blue;
+}
+
+.status-objective-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+.status-objective-name {
+  color: $accent-blue;
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.status-objective-difficulty {
+  font-size: 0.9rem;
+  color: $status-warning;
+}
+
+.status-objective-progress {
+  margin-bottom: 0.5rem;
+}
+
+.status-progress-text {
+  display: block;
+  color: $text-tertiary;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.status-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: $bg-card;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.status-progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.status-objective-solved {
+  color: $status-success;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.status-objective-final {
+  grid-column: 1 / -1; /* Span all 4 columns */
+}
+
+.status-objective-lock {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.final-task-locked,
+.final-task-unlocked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.final-task-unlocked {
+  margin-top: -35px;
+}
+
+.final-task-locked p {
+  color: $text-tertiary;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.final-task-unlocked p {
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.final-task-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.final-task-inputs-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  gap: 0.75rem;
+}
+
+.final-task-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.final-task-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.final-task-prefix {
+  color: $text-primary;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: right;
+  flex: 1;
+}
+
+.final-task-input {
+  width: 50%;
+  height: 32px;
+  padding: 0.375rem 0.5rem;
+  background: $bg-secondary;
+  border: 2px solid $border-secondary;
+  border-radius: 0.375rem;
+  color: $text-primary;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-family: monospace;
+  margin-right: 3rem;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  text-transform: uppercase;
+
+  &:focus {
+    border-color: $accent-blue;
+  }
+
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+.final-task-answer-correct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 8px 12px;
+  border: 1px solid $border-primary;
+  border-radius: 6px;
+  width: 60%;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final-task-answer {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.final-task-numbers {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.final-task-number-row {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $text-primary;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  div {
+    display: flex;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    border-radius: 0.6rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.final-task-final-input {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.final-task-input-final {
+  flex: 1;
+  height: 32px;
+  padding: 0.375rem 0.5rem;
+  background: $bg-secondary;
+  border: 2px solid $border-secondary;
+  border-radius: 0.375rem;
+  color: $text-primary;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: $accent-blue;
+  }
+
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+.final-task-submit-row {
+  display: flex;
+  width: 40%;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.final-task-vote-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.btn-verify-answer {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.final-task-finale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.finale-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background: $btn-primary;
+  color: $white;
+}
+
+.btn-primary:hover {
+  background: $btn-primary-hover;
+}
+
+/* Middle Section - Contains Leaderboard and Activity Feed */
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 35%;
+  min-width: 320px;
+}
+
+/* Leaderboard Section - Top of middle section */
+.leaderboard-section {
+  flex: 1;
+  min-height: 300px;
+  background: $bg-card;
+  border: 1px solid $border-primary;
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.leaderboard-entry {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: $bg-secondary;
+  border: 2px solid $border-secondary;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: border-color 0.2s;
+}
+
+.leaderboard-entry:hover {
+  border-color: $accent-blue;
+}
+
+.leaderboard-entry:first-child {
+  border-color: $status-warning;
+  background: $bg-card;
+}
+
+.leaderboard-rank {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $accent-blue;
+  min-width: 30px;
+  text-align: center;
+}
+
+.leaderboard-entry:first-child .leaderboard-rank {
+  color: $status-warning;
+  font-size: 1.75rem;
+}
+
+.leaderboard-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.leaderboard-codename {
+  color: $text-primary;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.leaderboard-name {
+  color: $text-tertiary;
+  font-size: 0.85rem;
+}
+
+.leaderboard-pieces {
+  color: $accent-blue;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.no-leaderboard-data {
+  color: $text-tertiary;
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+}
+
+/* Activity Feed Section - Bottom of middle section */
+.activity-feed-section {
+  flex: 1;
+  min-height: 300px;
+  background: $bg-card;
+  border: 1px solid $border-primary;
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.activity-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: $bg-secondary;
+  border: 2px solid $border-secondary;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: border-color 0.2s;
+}
+
+.activity-entry:hover {
+  border-color: $accent-blue;
+}
+
+.activity-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-message {
+  color: $text-primary;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.activity-time {
+  color: $text-tertiary;
+  font-size: 0.75rem;
+}
+
+.no-activity-data {
+  color: $text-tertiary;
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+}
+
+/* Scrollbar styling */
+.objectives-section::-webkit-scrollbar,
+.leaderboard-section::-webkit-scrollbar,
+.activity-feed-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.objectives-section::-webkit-scrollbar-track,
+.leaderboard-section::-webkit-scrollbar-track,
+.activity-feed-section::-webkit-scrollbar-track {
+  background: $bg-secondary;
+  border-radius: 4px;
+}
+
+.objectives-section::-webkit-scrollbar-thumb,
+.leaderboard-section::-webkit-scrollbar-thumb,
+.activity-feed-section::-webkit-scrollbar-thumb {
+  background: $border-secondary;
+  border-radius: 4px;
+}
+
+.objectives-section::-webkit-scrollbar-thumb:hover,
+.leaderboard-section::-webkit-scrollbar-thumb:hover,
+.activity-feed-section::-webkit-scrollbar-thumb:hover {
+  background: $accent-blue;
+}
+
+.red {
+  background-color: #ee4035;
+  color: white;
+}
+
+.orange {
+  background-color: #f38b54;
+  color: black;
+}
+
+.yellow {
+  background-color: #f0e56d;
+  color: black;
+}
+
+.green {
+  background-color: #7bc043;
+  color: black;
+}
+
+.blue {
+  background-color: #0392cf;
+  color: white;
+}
+
+.white {
+  background-color: white;
+  color: black;
+}
+
+.purple {
+  background-color: #c949e9;
+  color: white;
+}
+
+.black {
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .status-container {
+    padding: 10px;
+  }
+  
+  .status-content {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+  }
+  
+  .objectives-section {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .status-section-title {
+    font-size: 18px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+  }
+  
+  .objectives-list {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .status-objective-card {
+    padding: 0.75rem;
+  }
+  
+  .status-objective-name {
+    font-size: 1rem;
+  }
+  
+  .status-objective-difficulty {
+    font-size: 0.85rem;
+  }
+  
+  .status-progress-text {
+    font-size: 0.8rem;
+  }
+  
+  .status-objective-solved {
+    font-size: 0.8rem;
+  }
+  
+  .final-task-input {
+    font-size: 0.8rem;
+    height: 28px;
+    padding: 0.3rem 0.4rem;
+    margin-right: 1.5rem;
+  }
+  
+  .final-task-prefix {
+    font-size: 0.85rem;
+  }
+  
+  .final-task-inputs-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .final-task-number-row {
+    font-size: 1.2rem;
+    gap: 6px;
+    
+    div {
+      min-width: 2rem;
+      min-height: 2rem;
+      border-radius: 0.5rem;
+    }
+  }
+  
+  .final-task-input-final {
+    font-size: 0.8rem;
+    height: 28px;
+    padding: 0.3rem 0.4rem;
+  }
+  
+  .final-task-vote-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+  }
+  
+  .finale-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+  }
+  
+  .middle-section {
+    width: 100%;
+    min-width: 0;
+    gap: 1rem;
+  }
+  
+  .leaderboard-section,
+  .activity-feed-section {
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 250px;
+  }
+  
+  .leaderboard-entry {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  
+  .leaderboard-rank {
+    font-size: 1.25rem;
+    min-width: 25px;
+  }
+  
+  .leaderboard-entry:first-child .leaderboard-rank {
+    font-size: 1.5rem;
+  }
+  
+  .leaderboard-codename {
+    font-size: 0.9rem;
+  }
+  
+  .leaderboard-name {
+    font-size: 0.8rem;
+  }
+  
+  .leaderboard-pieces {
+    font-size: 0.85rem;
+  }
+  
+  .activity-entry {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  
+  .activity-icon {
+    font-size: 1.25rem;
+  }
+  
+  .activity-message {
+    font-size: 0.85rem;
+  }
+  
+  .activity-time {
+    font-size: 0.7rem;
+  }
+  
+  .no-leaderboard-data,
+  .no-activity-data {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+}

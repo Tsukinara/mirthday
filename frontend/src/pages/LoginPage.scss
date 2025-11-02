@@ -1,0 +1,218 @@
+@import '../constants';
+
+.login-container {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  background: $bg-card;
+  border: 1px solid $border-primary;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  margin-top: 0;
+  color: $text-primary;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background: $btn-primary;
+  color: $white;
+}
+
+.btn-primary:hover {
+  background: $btn-primary-hover;
+}
+
+.btn-success {
+  background: $btn-success;
+}
+
+.btn-success:hover {
+  background: $btn-success-hover;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background: $status-disabled;
+}
+
+/* Tab Buttons */
+.btn-tab {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-tab.active {
+  background: $btn-primary;
+  color: $white;
+}
+
+.btn-tab.inactive {
+  background: $border-primary;
+  color: $text-secondary;
+}
+
+.btn-tab.active-success {
+  background: $btn-success;
+  color: $white;
+}
+
+.btn-tab-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group-spacing {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: $dim-gray-light;
+  font-size: 14px;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid $border-primary;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: $bg-secondary;
+  color: $text-primary;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: $accent-indigo;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.form-option {
+  background: $bg-secondary;
+  color: $text-primary;
+}
+
+.form-hint {
+  margin-top: 5px;
+  font-size: 12px;
+  color: $text-muted;
+  font-style: italic;
+}
+
+/* Error Messages */
+.error-message {
+  background: $status-danger-bg;
+  color: $error-text;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid $accent-red-darker;
+  font-size: 14px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 10px;
+  }
+  
+  .login-card {
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .login-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-tab-group {
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .btn-tab {
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-label {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  
+  .form-input,
+  .form-select {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .btn-primary {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .form-hint {
+    font-size: 11px;
+  }
+  
+  .error-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+}

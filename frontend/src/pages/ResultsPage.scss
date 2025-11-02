@@ -1,0 +1,120 @@
+@import '../constants';
+
+.results-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $bg-primary 0%, $bg-secondary 100%);
+  padding: 2rem;
+  max-width: 95vw;
+}
+
+.results-content {
+  background: $bg-card;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.results-title {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  color: $text-primary;
+  font-weight: bold;
+}
+
+.results-message {
+  font-size: 1.2rem;
+  color: $text-primary;
+  margin: 0 0 2rem 0;
+}
+
+.results-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: $bg-secondary;
+  border: 2px solid $border-primary;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  min-width: 120px;
+  flex: 1;
+  max-width: 200px;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $accent-blue;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: $text-secondary;
+  text-align: center;
+}
+
+.results-thanks {
+  font-size: 1.5rem;
+  color: $text-primary;
+  margin: 2rem 0 0 0;
+  font-weight: 600;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .results-container {
+    padding: 1rem;
+  }
+
+  .results-content {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .results-title {
+    font-size: 2rem;
+  }
+
+  .results-message {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .results-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+    margin: 1.5rem 0;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: none;
+    padding: 1rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .results-thanks {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0 0;
+  }
+}
+

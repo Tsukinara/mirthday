@@ -1,0 +1,117 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+enum ObjectiveType {
+  EELS
+  KEYBOARD
+  GACHA
+  MUSIC
+  NAMETAGS
+  POSTCARDS
+  LIBRARY
+  TREASURE
+}
+
+enum PuzzleStatus {
+  SOLVED
+  UNSOLVED
+}
+
+enum Role {
+  PLAYER
+  ADMIN
+}
+
+enum ActivityType {
+  TASK_SOLVED
+  OBJECTIVE_CLEARED
+}
+
+enum EventStatusEnum {
+  NOT_STARTED
+  IN_PROGRESS
+  OBJECTIVES_COMPLETE
+  FINAL_TASK_COMPLETE
+  FINALE
+}
+
+model Activity {
+  id          Int          @id @default(autoincrement())
+  type        ActivityType
+  message     String
+  playerId    Int?
+  player      User?        @relation(fields: [playerId], references: [id])
+  createdAt   DateTime     @default(now())
+}
+
+model Objective {
+  id          Int           @id @default(autoincrement())
+  name        String
+  type        ObjectiveType @unique
+  status      PuzzleStatus
+  answer      String
+  totalPieces Int
+  piecesFound Int
+  updatedAt   DateTime      @updatedAt
+  difficulty  Int           @default(0)
+  tasks       Task[]
+}
+
+model User {
+  id       Int           @id @default(autoincrement())
+  name     String
+  codename String        @unique
+  pin      String
+  role     Role          @default(PLAYER)
+  tasks    Task[]
+  activities Activity[]
+  votes    Int           @default(1)
+  votesReceived Vote[]   @relation("VotesReceived")
+  votesCast     Vote[]   @relation("VotesCast")
+}
+
+model Task {
+  id           Int           @id @default(autoincrement())
+  code         String
+  status       PuzzleStatus
+  objectiveId  Int
+  objective    Objective     @relation(fields: [objectiveId], references: [id])
+  assigneeId   Int?
+  assignee     User?         @relation(fields: [assigneeId], references: [id])
+  contents     String
+  location     String        @default("Not yet hidden")
+  prefixText   String        @default("Not yet hidden, contact admin if you see this message.")
+  type         String?
+  clueContent  String?
+  releaseCount Int           @default(0)
+  createdAt    DateTime      @default(now())
+  assignedAt   DateTime?
+  completedAt  DateTime?
+  updatedAt    DateTime      @updatedAt
+}
+
+model EventStatus {
+  id        Int            @id @default(autoincrement())
+  status    EventStatusEnum @default(NOT_STARTED)
+}
+
+model Vote {
+  id            Int      @id @default(autoincrement())
+  voterId       Int
+  voter         User     @relation("VotesCast", fields: [voterId], references: [id])
+  recipientId   Int
+  recipient     User     @relation("VotesReceived", fields: [recipientId], references: [id])
+  createdAt     DateTime @default(now())
+}
