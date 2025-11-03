@@ -12,7 +12,7 @@ export const OBJECTIVES = [
     'TREASURE'
 ] as const;
 
-export const API_URL = 'http://localhost:5000';
+export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 // Possible agent codenames (display names in uppercase, stored in lowercase)
 export const AGENT_CODENAMES = [
