@@ -71,3 +71,6 @@ coverage/
 *.seed
 *.pid.lock
 
+
+# Local Netlify folder
+.netlify
